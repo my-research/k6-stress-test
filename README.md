@@ -16,11 +16,15 @@
 ### start rest api server
 
 ```shell
-cd ./rest-api-server
+$ cd ./rest-api-server
+$ ./gradlew clean build
+$ java -jar build/libs/rest-api-server.jar
 ```
 
 ### cli
 
+k6 실행
+
 ```shell
-docker run --rm -i grafana/k6 run --vus 100 - <stress-script.js
+$ docker run --rm -i grafana/k6 run --vus 100 - <stress-script.js
 ```
